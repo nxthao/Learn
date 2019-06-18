@@ -383,7 +383,7 @@ void main()
 	}
 }
 
-Practice9_CalculatePointer:
+Practice6_9_CalculatePointer:
 
 #include <stdio.h>
 #define MAX_TIMES 25 // MAX so chuyen
@@ -467,5 +467,58 @@ void main()
 		S = WorkEachPeople(i);
 		printf("Total work: %d \n", S);
 		Output(i);
+	}
+}
+
+
+Practice6_10_Factorial_Recursive:
+#include <stdio.h>
+
+int i;
+
+int Factorial(int i)
+{
+	int F;
+	printf("i = %d\n", i);
+	if (i <= 1)
+	{
+		return 1;
+	}
+
+	F = i * Factorial(i - 1);
+	printf("F = %d\n", F);
+	return F;
+
+}
+
+void main()
+{
+	printf("Value needs to calculate\n");
+	scanf_s("%d", &i);
+	printf("Factorial = %d\n", Factorial(i));
+}
+
+Practice6_11_Factorial_Fibonacci:
+#include <stdio.h>
+
+int Fibonacci(int i)
+{
+	if (i == 1)
+	{
+		return 1;
+	}
+	if (i == 0)
+	{
+		return 0;
+	}
+	return Fibonacci(i - 1) + Fibonacci(i - 2);
+}
+
+void main()
+{
+	int i;
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d \t", Fibonacci(i));
 	}
 }
