@@ -1,26 +1,25 @@
-/*
-Input the number of elements
-Input each element
-*/
 #include <stdio.h>
 
+int n, *p, Sum;
+
 void main()
-{
-	int n, * p, SUM = 0;
+{	
 	printf("Input the number of elements\n");
 	scanf_s("%d", &n);
-	p = (int*)malloc(n * sizeof(int));
+	p = (int*)calloc(n,sizeof(int));
+
 	if (p == NULL)
 	{
-		printf("Error => Memory is not allocated\n");
+		printf("ERROR => The memory is not allocated \n");
 		exit(0);
 	}
-	printf("Input each element: \n");
+	printf("Input each element\n");
 	for (int i = 0; i < n; i++)
 	{
+		printf("Input element %d\n", i);
 		scanf_s("%d", p + i);
-		SUM += *(p + i);
+		Sum += *(p + i);
 	}
-	printf("Sum: %d\n", SUM);
+	printf("Sum = %d\n", Sum);
 	free(p);
 }
