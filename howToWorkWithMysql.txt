@@ -1,0 +1,6 @@
+sudo mysql -u root -p mysql
+show databases;
+use openhab;
+show tables;
+describe Item1;
+select * from Item1;
