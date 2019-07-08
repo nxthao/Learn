@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 /*
 Given a singly linked list, find middle of the linked list. 
@@ -54,43 +55,28 @@ void DisplayNode(Node* node)
 	}
 }
 
-int FindLengthLinkedList(Node** headref)
+// Use 2 pointer traveser each node, node run faster than middle node
+void FindMiddleNode(Node *node)
 {
-	Node* node;
-	node = (*headref);
-	int l = 0;
-	while (node != NULL)
+	int i = 1;
+	Node *middle_node;
+	middle_node = node;
+
+	while (node->next != NULL)
 	{
-		l++;
 		node = node->next;
+		if (i & 1)
+		{
+			middle_node = middle_node->next;
+		}
+		i++;
 	}
-	return l;
+	printf("The data of the middle node: %d\n", middle_node->data);
 }
 
-void FindMiddleNode(Node *node, int l)
-{
-	float n;
-	n = (float) l/2; // we need to casting type for n, because n must be float
-	for (int i = 1; i < n; i++)
-	{
-		node = node->next;
-	}
-
-	// Check l is even or odd. if l is even that the list is even, we need to take the second node
-	if (l & 1) // right, l is even
-	{
-		printf("The data of the middle node: %d\n", node->data);
-	}
-	else
-	{
-		node = node->next;
-		printf("The data of the middle node: %d\n", node->data);
-	}
-}
 
 void main()
 {
-	int l; // length of linked list
 	Node* head;
 	head = NULL;
 
@@ -102,9 +88,5 @@ void main()
 
 	DisplayNode(head);
 
-	l = FindLengthLinkedList(&head);
-
-	printf("The length of linked list = %d\n", l);
-
-	FindMiddleNode(head, l);
+	FindMiddleNode(head);
 }
