@@ -76,7 +76,7 @@ void SwapNode(Node* *headref, int key1, int key2)
 		node2 = node2->next;
 	}
 
-	// Swap Node
+	// Check if node1 is head
 	if (pre_node1 != NULL)
 	{
 		pre_node1->next = node2;	
@@ -86,6 +86,7 @@ void SwapNode(Node* *headref, int key1, int key2)
 		(*headref) = node2;
 	}
 
+	// Check if node2 is head
 	if (pre_node2 != NULL)
 	{
 		pre_node2->next = node1;	
@@ -95,6 +96,7 @@ void SwapNode(Node* *headref, int key1, int key2)
 		(*headref) = node1;
 	}
 
+	// Swap Node
 	pre_node2->next = node1;
 	tmp_node = node1->next;
 	node1->next = node2->next;
