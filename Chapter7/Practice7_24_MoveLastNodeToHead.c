@@ -90,5 +90,6 @@ void main()
 	*/
 	MoveLastToHead(&head);
 
+	// Display node after moving last to head
 	DisplayNode(head);
 }
