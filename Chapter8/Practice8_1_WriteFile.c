@@ -1,8 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-/*
-Open the file, then write something into the file. finally, close this file
-*/
 
 FILE *fp;
 char *data = "Hello Thao Nguyen";
