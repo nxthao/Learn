@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 /*
-Open a file, then write something into the file. finally, close this file
+Open the file, then write something into the file. finally, close this file
 */
 
 FILE *fp;
