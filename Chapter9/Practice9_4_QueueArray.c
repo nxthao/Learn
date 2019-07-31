@@ -49,6 +49,7 @@ void Enqueue(Queue_t *tmpQueue, int newData)
       tmpQueue->rear++;
       tmpQueue->data[tmpQueue->rear] = newData;
       tmpQueue->size++;
+	  printf("%d is enqueue\n", tmpQueue->data[tmpQueue->front]);
    }
 }
 
@@ -72,6 +73,7 @@ void main()
 {
    Queue_t *queue = CreateQueue();
    Enqueue(queue, 2);
+   Enqueue(queue, 4);
    Dequeue(queue);
 
 }
