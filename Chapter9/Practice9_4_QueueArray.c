@@ -1,6 +1,7 @@
 #include <stdio.h>
 /*
 Queue with array: Enqueue, Dequeue, FrontQueue, RearQueue
+
 */
 
 const int MAX = 5;
