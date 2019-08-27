@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <string.h>
+/*
+Should use if to check which character it is, shouldd not use for
+*/
 
 char s[70];
 char b[70];
