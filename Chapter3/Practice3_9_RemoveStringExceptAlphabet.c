@@ -20,12 +20,16 @@ void main()
 	fflush(stdin);
 	gets(s);
 
-	for (int i = 0; (s[i] >= 'A' && s[i] <= 'Z') || s[i] != '\0'; i++)
+	for (int i = 0, j = 0; s[i] != '\0'; i++)
 	{
-		printf("%c\n", s[i]);
-		b[i] = s[i];
-		// (s[i] >= 'A' && s[i] <= 'Z') && 
+		if (s[i] >= 'a' && s[i] <= 'z' || s[i] >= 'A' && s[i] <= 'Z')
+		{
+			b[j] = s[i];
+			printf("%c", b[j]);
+			j++;
+		}
 	}
+	printf("\n");
 
 	Display(b);
 }
