@@ -27,7 +27,6 @@ char *CheckPrintAndAddressString(char p[20])
 		p++;
 	}
 	printf("Revert string %s\n", p);
-
 }
 
 void main()
